@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "ES6",
+    "lib": ["ES6", "DOM", "ES2016", "ES2017"],
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+    "declaration": true,
+    "declarationDir": "./dist/",
+    "esModuleInterop": true,
+  },
+  "include": [
+    "src"
+  ]
+}
