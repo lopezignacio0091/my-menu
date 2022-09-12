@@ -5,3 +5,8 @@ export interface CreateRecipeType {
   instructions: string;
   ingredients: string[];
 }
+
+export interface FilterType {
+  value: string;
+  filter:string;
+}

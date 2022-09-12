@@ -3,9 +3,12 @@ import { Field, Form } from "react-final-form";
 import BasicIcon from "../../../../components/BasicIcon/BasicIcon";
 import SelectInput from "../../../../components/SelectInput/SelectInput";
 import TextInput from "../../../../components/TextInput/TextInput";
+import { actions as recipesAction } from "../../../../reducers/recipes/actions";
 import { InputContainer, SelectContainer } from "./styles";
+import { useDispatch } from "react-redux";
 
 const Filters = () => {
+  const dispatch = useDispatch();
   const handleInitValues = useMemo(
     () => [
       { id: 1, name: "Todos" },
@@ -13,6 +16,19 @@ const Filters = () => {
       { id: 2, name: "No cocinados" },
     ],
     []
+  );
+  const handleSelect = useCallback(
+    ({ name }: any) => {
+      dispatch(
+        name === "Todos"
+          ? recipesAction.recipesRequest()
+          : recipesAction.filterRequest({
+              value: name === "Cocinados" ? true : false,
+              filter: "cooked",
+            })
+      );
+    },
+    [dispatch]
   );
 
   const onSubmit = useCallback(() => {}, []);
@@ -37,6 +53,8 @@ const Filters = () => {
               label="Cocinar"
               options={handleInitValues}
               variant="contained-select"
+              onChange={handleSelect}
+              isValueObject
             />
           </SelectContainer>
         </form>

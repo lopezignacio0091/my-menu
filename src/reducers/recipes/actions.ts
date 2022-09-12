@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { CreateRecipeType } from "../../sagas/recipes/types";
+import { CreateRecipeType, FilterType } from "../../sagas/recipes/types";
 import { Recipes } from "./types";
 
 export const initialState: Recipes = {
@@ -30,6 +30,11 @@ export const recipesSlice = createSlice({
     },
     recipesCreate(state, action: PayloadAction<CreateRecipeType>) {
       state.succesCreate = true;
+    },
+    filterRequest(state, action) {
+      state.fetching = true;
+      state.error = false;
+      state.recipes = action.payload;
     },
   },
   extraReducers: {},

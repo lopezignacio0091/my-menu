@@ -1,11 +1,11 @@
 import React, { useCallback } from "react";
 import BasicIcon from "../../../../components/BasicIcon/BasicIcon";
 import ToggleSwitch from "../../../../components/ToggleSwitch/ToggleSwitch";
-import { Table, Thead, TH, Tbody ,StarContainer } from "./styles";
+import { Table, Thead, TH, Tbody, StarContainer } from "./styles";
 import { TableViewProps } from "./types";
-import { Irecipes } from '../../../../reducers/recipes/types';
+import { Irecipes } from "../../../../reducers/recipes/types";
 
-export const TableView :React.FC<TableViewProps> = ({recipes}) => {
+export const TableView: React.FC<TableViewProps> = ({ recipes, onFilter }) => {
   const INACTIVE_COLOR = "#E9DBCB";
   const ACTIVE_COLOR = "#FFD19A";
 
@@ -13,22 +13,32 @@ export const TableView :React.FC<TableViewProps> = ({recipes}) => {
     (count: number) => Array.from({ length: count }, () => "🟊"),
     []
   );
-  const handleColor = useCallback((index: number, value: number) : string =>
-    index < value ? ACTIVE_COLOR : INACTIVE_COLOR
-  ,[]);
+  const handleColor = useCallback(
+    (index: number, value: number): string =>
+      index < value ? ACTIVE_COLOR : INACTIVE_COLOR,
+    []
+  );
+  const handleFilter = useCallback(
+    (value: boolean) => onFilter(value),
+    [onFilter]
+  );
 
-  const handleToggleSwitch = useCallback((elem : boolean)=>{
-    return(
-            <ToggleSwitch value={elem} />
-    )
-  },[])
+  const handleToggleSwitch = useCallback((elem: boolean) => {
+    return <ToggleSwitch value={elem} onChange={handleFilter} />;
+  }, [handleFilter]);
 
   const handleRating = useCallback(
     (count: number, value: number) => {
       return (
         <StarContainer>
           {handleStars(count).map((s, index) => {
-            return <BasicIcon key={index} name="star" color={handleColor(index,value)} />;
+            return (
+              <BasicIcon
+                key={index}
+                name="star"
+                color={handleColor(index, value)}
+              />
+            );
           })}
         </StarContainer>
       );
@@ -45,7 +55,7 @@ export const TableView :React.FC<TableViewProps> = ({recipes}) => {
       {recipes?.map((el: Irecipes) => (
         <Tbody key={el?.id}>
           <td>{el?.name}</td>
-          <td>{handleRating(5,el?.score)}</td>
+          <td>{handleRating(5, el?.score)}</td>
           <td>{handleToggleSwitch(el?.cooked)}</td>
         </Tbody>
       ))}

@@ -19,6 +19,7 @@ import { ViewRecipes } from "./components/ViewRecipes";
 import Button from "../../components/Button/Button";
 import { Recipes } from "./components/Recipes/Recipes";
 import BasicIcon from "../../components/BasicIcon/BasicIcon";
+import LoadingDots from "../../components/Loading/Loading";
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ export const Home = () => {
     dispatch(recipesActions.recipesRequest());
   }, [dispatch, succes]);
 
-  if (loading) return <BasicIcon name="advertence" />;
+  if (loading) return <LoadingDots/>;
   return (
     <Container>
       <LogoImage src={handleLogo} />
