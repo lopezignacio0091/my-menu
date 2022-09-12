@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import { useSelector } from "react-redux";
 import Filters from "./Filters/Filters";
 import {
   FilterContainer,
@@ -6,13 +7,15 @@ import {
   RecipesContainer,
   TitleContainer,
   TitleRecipes,
-  TableContainer
+  TableContainer,
 } from "./styles";
 import { TableView } from "./Table/TableView";
+import { recipesSelector } from "../../../reducers/recipes/selectors";
 
 const TITLE = "Recetas de Cocina";
 
 export const ViewRecipes = () => {
+  const recipes = useSelector(recipesSelector);
   const handleTitle = useMemo(() => TITLE, []);
 
   return (
@@ -26,7 +29,7 @@ export const ViewRecipes = () => {
         </FilterContainer>
       </HeaderContainer>
       <TableContainer>
-        <TableView />
+        <TableView recipes={recipes} />
       </TableContainer>
     </RecipesContainer>
   );

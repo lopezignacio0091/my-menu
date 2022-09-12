@@ -1,0 +1,55 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Melodia de bayas mixtas",
+      "score": 3,
+      "cooked": true
+    },
+    {
+      "id": 2,
+      "name": "Sopa tailandesa",
+      "score": 2,
+      "cooked": false
+    },
+    {
+      "id": 3,
+      "name": "Berenjena especiada crujiente",
+      "score": 4,
+      "cooked": true
+    },
+    {
+      "id": 4,
+      "name": "Sopa de calabaza",
+      "score": 3,
+      "cooked": true
+    },
+    {
+      "id": 5,
+      "name": "Berenjena especiada crujiente",
+      "score": 4,
+      "cooked": true
+    },
+    {
+      "id": 6,
+      "name": "Sopa de calabaza",
+      "score": 3,
+      "cooked": true
+    },
+    {
+      "id": 7,
+      "name": "Berenjena especiada crujiente",
+      "score": 4,
+      "cooked": true
+    },
+    {
+      "name": "Lemon pie",
+      "ingredients": [
+        "dasdas"
+      ],
+      "instructions": "dasdasd dadasd. ",
+      "score": 2,
+      "id": 8
+    }
+  ]
+}

@@ -1,5 +1,4 @@
-import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
-import { ThemeProvider } from 'styled-components';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { ToggleSwitchProps } from './types';
 import {
   InputContainer,

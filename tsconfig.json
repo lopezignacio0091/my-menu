@@ -10,7 +10,7 @@
     "moduleResolution": "Node",
     "declaration": true,
     "declarationDir": "./dist/",
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
   "include": [
     "src"

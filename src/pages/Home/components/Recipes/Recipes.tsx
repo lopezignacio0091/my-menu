@@ -28,17 +28,26 @@ import ToggleSwitch from "../../../../components/ToggleSwitch/ToggleSwitch";
 import Button from "../../../../components/Button/Button";
 
 const COLOR_ADD = "#8DC63F";
-const COLOR_DELETE = "#F7941D"
+const COLOR_DELETE = "#F7941D";
 
-export const Recipes: React.FC<RecipeProps> = ({ open, close, isEdit }) => {
+export const Recipes: React.FC<RecipeProps> = ({
+  open,
+  close,
+  isEdit,
+  create,
+}) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [countIngredients, setCountIngredients] = useState<Array<number>>([1]);
   const handleClose = useCallback(() => close(), [close]);
 
-  const onSubmit = useCallback((values :any) => {
-    setIsSubmitting(true);
-    alert(JSON.stringify(values));
-  }, []);
+  const onSubmit = useCallback(
+    (values: any) => {
+      setIsSubmitting(true);
+      create(values);
+      close();
+    },
+    [close, create]
+  );
 
   // FUNCTION SET  ICON
   const handleNameIcon = useCallback(
@@ -48,7 +57,7 @@ export const Recipes: React.FC<RecipeProps> = ({ open, close, isEdit }) => {
 
   // FUNCTION SET COLOR ICON
   const handleColorIcon = useCallback(
-    (isLast: boolean) => (isLast ? COLOR_ADD: COLOR_DELETE),
+    (isLast: boolean) => (isLast ? COLOR_ADD : COLOR_DELETE),
     []
   );
   //FUNCTION TO ADD INGREDIENTS
@@ -69,8 +78,8 @@ export const Recipes: React.FC<RecipeProps> = ({ open, close, isEdit }) => {
           {[1, 2, 3, 4].map((elem) => (
             <Field
               key={elem}
-              name="review"
-              checked={values.review === elem}
+              name="score"
+              checked={values.score === elem}
               component={RadioButton}
               label={elem}
               format={formatFormRadio()}
@@ -92,7 +101,7 @@ export const Recipes: React.FC<RecipeProps> = ({ open, close, isEdit }) => {
             <NumberContainer>{index + 1}</NumberContainer>
             <InputContainer>
               <Field
-                name={`Ingredients.${index}`}
+                name={`ingredients.${index}`}
                 component={TextInput}
                 placeholder="Titulo"
                 validate={required}
@@ -114,7 +123,13 @@ export const Recipes: React.FC<RecipeProps> = ({ open, close, isEdit }) => {
         ))}
       </>
     ),
-    [countIngredients, handleAddCount, handleDiscount, handleNameIcon,handleColorIcon]
+    [
+      countIngredients,
+      handleAddCount,
+      handleDiscount,
+      handleNameIcon,
+      handleColorIcon,
+    ]
   );
 
   return (
@@ -147,7 +162,7 @@ export const Recipes: React.FC<RecipeProps> = ({ open, close, isEdit }) => {
                 <LabelName>Preparacion</LabelName>
                 <PreparationContainer>
                   <Field
-                    name="preparation"
+                    name="instructions"
                     component={TextAreaInput}
                     placeholder="Intrucciones *"
                     validate={required}
