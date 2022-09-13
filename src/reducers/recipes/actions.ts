@@ -9,6 +9,7 @@ export const initialState: Recipes = {
   error: false,
   fetching: false,
   succesCreate: false,
+  viewRecipe: null,
 };
 
 export const recipesSlice = createSlice({
@@ -35,6 +36,15 @@ export const recipesSlice = createSlice({
       state.fetching = true;
       state.error = false;
       state.recipes = action.payload;
+    },
+    viewRecipe(state, action) {
+      state.error = false;
+    },
+    viewRecipeSucces(state, action) {
+      state.viewRecipe = action.payload;
+    },
+    viewRecipeReset(state) {
+      state.viewRecipe = null;
     },
   },
   extraReducers: {},

@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 
-export const ContainerRecipes = styled.div<{ isOpen: boolean }>`
+export const ContainerRecipes = styled.div<{
+  isOpen: boolean;
+}>`
   width: auto;
   border-radius: 0px 0px 0px 20px;
   position: absolute;
@@ -10,8 +12,6 @@ export const ContainerRecipes = styled.div<{ isOpen: boolean }>`
   overflow: hidden;
   z-index: 9999;
   min-width: 269px;
-  height: 100%;
-  max-height: 100vh;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
   background-color: #ffffff;
   ${({ isOpen }) =>
@@ -20,6 +20,7 @@ export const ContainerRecipes = styled.div<{ isOpen: boolean }>`
       transition: all 0.3s;
       max-height: 0;
     `}
+ 
 `;
 
 export const BoxRecipes = styled.div`
@@ -65,7 +66,7 @@ export const LabelName = styled.div`
 `;
 
 export const BoxIngredients = styled.div`
-  margin-top: 42px;
+  margin-top: 34px;
 `;
 
 export const ContainerIngredients = styled.div`
@@ -97,7 +98,7 @@ export const InputContainer = styled.div`
 `;
 
 export const PreparationContainer = styled.div`
-  margin-top: 14px;
+  margin: 14px 0 40px;
 `;
 
 export const ReviewContainer = styled.div`
@@ -114,4 +115,7 @@ export const ContainerSwicht = styled.div`
 export const ContainerButton = styled.div`
   display: flex;
   flex-direction: row-reverse;
+  margin-bottom: 10px;
 `;
+
+

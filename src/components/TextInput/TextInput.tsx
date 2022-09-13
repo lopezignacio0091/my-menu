@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from "react";
-import { TextInputProps ,IconPosition} from "./types";
+import { TextInputProps} from "./types";
 import Input from "../Input/Input";
 
 const TextInput: React.FC<TextInputProps> = (props) => {

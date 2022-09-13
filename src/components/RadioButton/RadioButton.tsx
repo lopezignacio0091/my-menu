@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useMemo, useRef } from "react";
+import React, { useCallback, useMemo, useRef } from "react";
 import { RadioButtonProps } from "./types";
 import { Label, RadioContainer, Input, Span } from "./styles";
 

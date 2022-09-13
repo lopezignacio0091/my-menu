@@ -1,4 +1,5 @@
 import { createDraftSafeSelector } from "@reduxjs/toolkit";
+
 const selectSelf = (state: any) => state;
 
 export const recipesSelector = createDraftSafeSelector(
@@ -16,4 +17,9 @@ export const errorSelector = createDraftSafeSelector(
 export const succesSelector = createDraftSafeSelector(
   selectSelf,
   (state) => state.recipes.succesCreate
+);
+
+export const viewRecipeSelector = createDraftSafeSelector(
+  selectSelf,
+  (state) => state.recipes.viewRecipe
 );

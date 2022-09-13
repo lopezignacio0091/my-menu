@@ -12,22 +12,35 @@ import {
 import { TableView } from "./Table/TableView";
 import { actions as recipesAction } from "../../../reducers/recipes/actions";
 import { recipesSelector } from "../../../reducers/recipes/selectors";
+import { ViewRecipeProps } from "./types";
 
 const TITLE = "Recetas de Cocina";
 
-export const ViewRecipes = () => {
+export const ViewRecipes: React.FC<ViewRecipeProps> = ({ onOpen }) => {
   const dispatch = useDispatch();
   const recipes = useSelector(recipesSelector);
   const handleTitle = useMemo(() => TITLE, []);
 
-  const handleFilter = useCallback((value: boolean) => {
-    dispatch(
-      recipesAction.filterRequest({
-        value: value,
-        filter: "cooked",
-      })
-    );
-  }, [dispatch]);
+  const handleFilter = useCallback(
+    (value: boolean) => {
+      dispatch(
+        recipesAction.filterRequest({
+          value: value,
+          filter: "cooked",
+        })
+      );
+    },
+    [dispatch]
+  );
+
+  const handleView = useCallback(
+    (id: number) => {
+      dispatch(recipesAction.viewRecipe(id));
+      onOpen();
+    },
+    [dispatch, onOpen]
+  );
+
   return (
     <RecipesContainer>
       <HeaderContainer>
@@ -39,7 +52,11 @@ export const ViewRecipes = () => {
         </FilterContainer>
       </HeaderContainer>
       <TableContainer>
-        <TableView recipes={recipes} onFilter={handleFilter}/>
+        <TableView
+          recipes={recipes}
+          onFilter={handleFilter}
+          onView={handleView}
+        />
       </TableContainer>
     </RecipesContainer>
   );

@@ -4,37 +4,85 @@
       "id": 1,
       "name": "Melodia de bayas mixtas",
       "score": 3,
-      "cooked": true
+      "cooked": true,
+      "ingredients": [
+        "1/4 taza de semillas de chía negra",
+        "2 1/2 tazas de leche de almendras",
+        "2 naranjas",
+        "1/4 taza de semillas de chía negra",
+        "1/4 taza de semillas de chía negra"
+      ],
+      "instructions": " Combine las semillas de chía, la leche de almendras y 1 cucharada de jarabe de arce en una jarra grande. Deje reposar durante 3-4 minutos o hasta que las semillas se hinchen. Mientras tanto, ralla finamente 1 cucharadita de cáscara de 1 naranja. Cortar los gajos de ambas naranjas (ver Notas).Combine la harina, el polvo para hornear, la cáscara de naranja y la mitad de las nueces en un tazón mediano. Batir la mezcla de leche hasta que quede suave. Agregue los arándanos.Rociar una sartén antiadherente con aceite y calentar a fuego medio. Cocine al ras 1/2 taza de medidas de la mezcla, en tandas, durante 2 minutos por cada lado o hasta que estén doradas para hacer 8 panqueques. Repartir entre platos. Cubra con los gajos de naranja, la ricota, el almíbar restante y las nueces."
     },
     {
       "id": 2,
       "name": "Sopa tailandesa",
       "score": 2,
-      "cooked": false
+      "cooked": false,
+      "ingredients": [
+        "1/4 taza de semillas de chía negra",
+        "2 1/2 tazas de leche de almendras",
+        "2 naranjas",
+        "1/4 taza de semillas de chía negra",
+        "1/4 taza de semillas de chía negra"
+      ],
+      "instructions": " Combine las semillas de chía, la leche de almendras y 1 cucharada de jarabe de arce en una jarra grande. Deje reposar durante 3-4 minutos o hasta que las semillas se hinchen. Mientras tanto, ralla finamente 1 cucharadita de cáscara de 1 naranja. Cortar los gajos de ambas naranjas (ver Notas).Combine la harina, el polvo para hornear, la cáscara de naranja y la mitad de las nueces en un tazón mediano. Batir la mezcla de leche hasta que quede suave. Agregue los arándanos.Rociar una sartén antiadherente con aceite y calentar a fuego medio. Cocine al ras 1/2 taza de medidas de la mezcla, en tandas, durante 2 minutos por cada lado o hasta que estén doradas para hacer 8 panqueques. Repartir entre platos. Cubra con los gajos de naranja, la ricota, el almíbar restante y las nueces."
     },
     {
       "id": 3,
       "name": "Berenjena especiada crujiente",
       "score": 4,
-      "cooked": true
+      "cooked": true,
+      "ingredients": [
+        "1/4 taza de semillas de chía negra",
+        "2 1/2 tazas de leche de almendras",
+        "2 naranjas",
+        "1/4 taza de semillas de chía negra",
+        "1/4 taza de semillas de chía negra"
+      ],
+      "instructions": " Combine las semillas de chía, la leche de almendras y 1 cucharada de jarabe de arce en una jarra grande. Deje reposar durante 3-4 minutos o hasta que las semillas se hinchen. Mientras tanto, ralla finamente 1 cucharadita de cáscara de 1 naranja. Cortar los gajos de ambas naranjas (ver Notas).Combine la harina, el polvo para hornear, la cáscara de naranja y la mitad de las nueces en un tazón mediano. Batir la mezcla de leche hasta que quede suave. Agregue los arándanos.Rociar una sartén antiadherente con aceite y calentar a fuego medio. Cocine al ras 1/2 taza de medidas de la mezcla, en tandas, durante 2 minutos por cada lado o hasta que estén doradas para hacer 8 panqueques. Repartir entre platos. Cubra con los gajos de naranja, la ricota, el almíbar restante y las nueces."
     },
     {
       "id": 4,
       "name": "Sopa de calabaza",
       "score": 3,
-      "cooked": true
+      "cooked": true,
+      "ingredients": [
+        "1/4 taza de semillas de chía negra",
+        "2 1/2 tazas de leche de almendras",
+        "2 naranjas",
+        "1/4 taza de semillas de chía negra",
+        "1/4 taza de semillas de chía negra"
+      ],
+      "instructions": " Combine las semillas de chía, la leche de almendras y 1 cucharada de jarabe de arce en una jarra grande. Deje reposar durante 3-4 minutos o hasta que las semillas se hinchen. Mientras tanto, ralla finamente 1 cucharadita de cáscara de 1 naranja. Cortar los gajos de ambas naranjas (ver Notas).Combine la harina, el polvo para hornear, la cáscara de naranja y la mitad de las nueces en un tazón mediano. Batir la mezcla de leche hasta que quede suave. Agregue los arándanos.Rociar una sartén antiadherente con aceite y calentar a fuego medio. Cocine al ras 1/2 taza de medidas de la mezcla, en tandas, durante 2 minutos por cada lado o hasta que estén doradas para hacer 8 panqueques. Repartir entre platos. Cubra con los gajos de naranja, la ricota, el almíbar restante y las nueces."
     },
     {
       "id": 5,
       "name": "Berenjena especiada crujiente",
       "score": 4,
-      "cooked": true
+      "cooked": true,
+      "ingredients": [
+        "1/4 taza de semillas de chía negra",
+        "2 1/2 tazas de leche de almendras",
+        "2 naranjas",
+        "1/4 taza de semillas de chía negra",
+        "1/4 taza de semillas de chía negra"
+      ],
+      "instructions": " Combine las semillas de chía, la leche de almendras y 1 cucharada de jarabe de arce en una jarra grande. Deje reposar durante 3-4 minutos o hasta que las semillas se hinchen. Mientras tanto, ralla finamente 1 cucharadita de cáscara de 1 naranja. Cortar los gajos de ambas naranjas (ver Notas).Combine la harina, el polvo para hornear, la cáscara de naranja y la mitad de las nueces en un tazón mediano. Batir la mezcla de leche hasta que quede suave. Agregue los arándanos.Rociar una sartén antiadherente con aceite y calentar a fuego medio. Cocine al ras 1/2 taza de medidas de la mezcla, en tandas, durante 2 minutos por cada lado o hasta que estén doradas para hacer 8 panqueques. Repartir entre platos. Cubra con los gajos de naranja, la ricota, el almíbar restante y las nueces."
     },
     {
       "id": 6,
       "name": "Sopa de calabaza",
       "score": 3,
-      "cooked": true
+      "cooked": true,
+      "ingredients": [
+        "1/4 taza de semillas de chía negra",
+        "2 1/2 tazas de leche de almendras",
+        "2 naranjas",
+        "1/4 taza de semillas de chía negra",
+        "1/4 taza de semillas de chía negra"
+      ],
+      "instructions": " Combine las semillas de chía, la leche de almendras y 1 cucharada de jarabe de arce en una jarra grande. Deje reposar durante 3-4 minutos o hasta que las semillas se hinchen. Mientras tanto, ralla finamente 1 cucharadita de cáscara de 1 naranja. Cortar los gajos de ambas naranjas (ver Notas).Combine la harina, el polvo para hornear, la cáscara de naranja y la mitad de las nueces en un tazón mediano. Batir la mezcla de leche hasta que quede suave. Agregue los arándanos.Rociar una sartén antiadherente con aceite y calentar a fuego medio. Cocine al ras 1/2 taza de medidas de la mezcla, en tandas, durante 2 minutos por cada lado o hasta que estén doradas para hacer 8 panqueques. Repartir entre platos. Cubra con los gajos de naranja, la ricota, el almíbar restante y las nueces."
     },
     {
       "id": 7,
@@ -50,6 +98,18 @@
       "instructions": "dasdasd dadasd. ",
       "score": 2,
       "id": 8
+    },
+    {
+      "instructions": "Combine las semillas de chía, la leche de almendras y 1 cucharada de jarabe de arce en una jarra grande. Deje reposar durante 3-4 minutos o hasta que las semillas se hinchen. Mientras tanto, ralla finamente 1 cucharadita de cáscara de 1 naranja. Cortar los gajos de ambas naranjas (ver Notas).\nCombine la harina, el polvo para hornear, la cáscara de naranja y la mitad de las nueces en un tazón mediano. Batir la mezcla de leche hasta que quede suave. Agregue los arándanos.\nRociar una sartén antiadherente con aceite y calentar a fuego medio. Cocine al ras 1/2 taza de medidas de la mezcla, en tandas, durante 2 minutos por cada lado o hasta que estén doradas para hacer 8 panqueques. Repartir entre platos. Cubra con los gajos de naranja, la ricota, el almíbar restante y las nueces.",
+      "ingredients": [
+        "1/4 taza de semillas de chía negra",
+        "1/4 taza de semillas de chía negra",
+        "1/4 taza de semillas de chía negra"
+      ],
+      "score": 2,
+      "cooked": true,
+      "name": "Miloja de papas",
+      "id": 9
     }
   ]
 }

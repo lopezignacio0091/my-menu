@@ -1,50 +1,29 @@
 import React, { useCallback } from "react";
-import BasicIcon from "../../../../components/BasicIcon/BasicIcon";
 import ToggleSwitch from "../../../../components/ToggleSwitch/ToggleSwitch";
-import { Table, Thead, TH, Tbody, StarContainer } from "./styles";
+import { Table, Thead, TH, Tbody } from "./styles";
 import { TableViewProps } from "./types";
 import { Irecipes } from "../../../../reducers/recipes/types";
+import StarC  from "../Start/StarC";
 
-export const TableView: React.FC<TableViewProps> = ({ recipes, onFilter }) => {
-  const INACTIVE_COLOR = "#E9DBCB";
-  const ACTIVE_COLOR = "#FFD19A";
-
-  const handleStars = useCallback(
-    (count: number) => Array.from({ length: count }, () => "🟊"),
-    []
-  );
-  const handleColor = useCallback(
-    (index: number, value: number): string =>
-      index < value ? ACTIVE_COLOR : INACTIVE_COLOR,
-    []
-  );
+export const TableView: React.FC<TableViewProps> = ({
+  recipes,
+  onFilter,
+  onView,
+}) => {
   const handleFilter = useCallback(
     (value: boolean) => onFilter(value),
     [onFilter]
   );
 
-  const handleToggleSwitch = useCallback((elem: boolean) => {
-    return <ToggleSwitch value={elem} onChange={handleFilter} />;
-  }, [handleFilter]);
+  const handleClick = useCallback((id: number) => () => onView(id), [onView]);
 
-  const handleRating = useCallback(
-    (count: number, value: number) => {
-      return (
-        <StarContainer>
-          {handleStars(count).map((s, index) => {
-            return (
-              <BasicIcon
-                key={index}
-                name="star"
-                color={handleColor(index, value)}
-              />
-            );
-          })}
-        </StarContainer>
-      );
+  const handleToggleSwitch = useCallback(
+    (elem: boolean) => {
+      return <ToggleSwitch value={elem} onChange={handleFilter} />;
     },
-    [handleColor, handleStars]
+    [handleFilter]
   );
+
   return (
     <Table>
       <Thead>
@@ -54,8 +33,10 @@ export const TableView: React.FC<TableViewProps> = ({ recipes, onFilter }) => {
       </Thead>
       {recipes?.map((el: Irecipes) => (
         <Tbody key={el?.id}>
-          <td>{el?.name}</td>
-          <td>{handleRating(5, el?.score)}</td>
+          <td onClick={handleClick(el?.id)}>{el?.name}</td>
+          <td>
+            <StarC count={5} value={el?.score} />
+          </td>
           <td>{handleToggleSwitch(el?.cooked)}</td>
         </Tbody>
       ))}

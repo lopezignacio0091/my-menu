@@ -1,6 +1,5 @@
 import { ReactComponent as AcademicCap } from '../../assets/icons/academic-cap.svg';
 import { ReactComponent as Add } from '../../assets/icons/add.svg';
-import { ReactComponent as AddTime } from '../../assets/icons/add-time.svg';
 import { ReactComponent as Adjustments } from '../../assets/icons/adjustments.svg';
 import { ReactComponent as Advertence } from '../../assets/icons/advertence.svg';
 import { ReactComponent as Annotation } from '../../assets/icons/annotation.svg';

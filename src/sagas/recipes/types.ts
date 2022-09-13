@@ -10,3 +10,8 @@ export interface FilterType {
   value: string;
   filter:string;
 }
+
+export interface ViewType {
+    id: number;
+  }
+  

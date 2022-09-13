@@ -12,8 +12,8 @@ export const Thead = styled.tr`
   font-weight: 600;
   display: grid;
   grid-template-columns: 60% 20% 20%;
-  padding:16px 8px;
-  margin-top:8px;
+  padding: 16px 8px;
+  margin-top: 8px;
 `;
 
 export const Tbody = styled(Thead)`
@@ -25,8 +25,9 @@ export const Tbody = styled(Thead)`
   line-height: 24px;
   display: grid;
   grid-template-columns: 60% 20% 20%;
-  &{
-    padding:8px;
+  & {
+    padding: 8px;
+    cursor: pointer;
   }
 `;
 
@@ -37,6 +38,6 @@ export const TH = styled.th`
   margin-bottom: 5px;
 `;
 export const StarContainer = styled.div`
-    display:flex;
-    flex-direction:row;
+  display: flex;
+  flex-direction: row;
 `;

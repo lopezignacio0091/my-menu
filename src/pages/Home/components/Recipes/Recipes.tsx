@@ -70,6 +70,9 @@ export const Recipes: React.FC<RecipeProps> = ({
   }, []);
   const formatFormRadio = useCallback(() => (value: any) => value, []);
   const parseFormRadio = useCallback((elem: number) => () => elem, []);
+  // FUCTION CHECKED DISABLED
+
+
   //RENDER REVIEWS
   const handleReviews = useCallback(
     (values: any) => (
@@ -79,7 +82,7 @@ export const Recipes: React.FC<RecipeProps> = ({
             <Field
               key={elem}
               name="score"
-              checked={values.score === elem}
+              checked={values?.score === elem}
               component={RadioButton}
               label={elem}
               format={formatFormRadio()}
@@ -93,44 +96,39 @@ export const Recipes: React.FC<RecipeProps> = ({
   );
 
   //   RENDER INGREDIENTS
-  const handleIngredients = useCallback(
-    () => (
-      <>
-        {countIngredients.map((elem, index) => (
-          <ContentIngredients key={elem}>
-            <NumberContainer>{index + 1}</NumberContainer>
-            <InputContainer>
-              <Field
-                name={`ingredients.${index}`}
-                component={TextInput}
-                placeholder="Titulo"
-                validate={required}
-                variant="outlined"
-              />
-            </InputContainer>
-            <BasicIcon
-              name={handleNameIcon(index + 1 === countIngredients.length)}
-              color={handleColorIcon(index + 1 === countIngredients.length)}
-              onClick={
-                countIngredients.length <= 1
-                  ? handleAddCount
-                  : index + 1 === countIngredients.length
-                  ? handleAddCount
-                  : handleDiscount
-              }
-            />
-          </ContentIngredients>
-        ))}
-      </>
-    ),
-    [
-      countIngredients,
-      handleAddCount,
-      handleDiscount,
-      handleNameIcon,
-      handleColorIcon,
-    ]
-  );
+  const handleIngredients = useCallback(() => {
+    return countIngredients.map((elem: any, index) => (
+      <ContentIngredients key={elem}>
+        <NumberContainer>{index + 1}</NumberContainer>
+        <InputContainer>
+          <Field
+            name={`ingredients.${index}`}
+            component={TextInput}
+            placeholder="Titulo"
+            validate={required}
+            variant="outlined"
+          />
+        </InputContainer>
+        <BasicIcon
+          name={handleNameIcon(index + 1 === countIngredients.length)}
+          color={handleColorIcon(index + 1 === countIngredients.length)}
+          onClick={
+            countIngredients.length <= 1
+              ? handleAddCount
+              : index + 1 === countIngredients.length
+              ? handleAddCount
+              : handleDiscount
+          }
+        />
+      </ContentIngredients>
+    ));
+  }, [
+    countIngredients,
+    handleNameIcon,
+    handleColorIcon,
+    handleAddCount,
+    handleDiscount,
+  ]);
 
   return (
     <ContainerRecipes isOpen={open}>

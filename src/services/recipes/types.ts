@@ -7,3 +7,8 @@ export type RecipeResponseType = {
     data: Irecipes;
     status: number;
   };
+
+  export type ViewResponseType = {
+    data: Irecipes;
+    status: number;
+  };
