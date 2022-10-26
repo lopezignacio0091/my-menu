@@ -1,8 +1,15 @@
 import styled, { css } from "styled-components";
+import body from '../../assets/body.png';
 
+export const ContainerFluid = styled.div`
+  width: 100%; 
+   overflow: hidden;
+`;
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  background: url(${body});
+
 `;
 export const LogoImage = styled.img`
   height: 81.39px;

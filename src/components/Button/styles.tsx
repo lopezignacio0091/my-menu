@@ -238,37 +238,37 @@ export const Button = styled.button<{
         return css`
           background-color: transparent;
           border-color: transparent;
-          color: ${theme.gray2D};
+          color: #2d2d2d;
 
           & > div svg > path,
           & > div svg > rect,
           & > div svg > circle {
-            stroke: ${theme.gray2D};
+            stroke: #2d2d2d;
           }
 
           ${!isSubmitting &&
           css`
             &:hover {
-              color: ${theme.status[status].color};
+              color: #ccccc;
               background-color: ${theme.status[status].opacity};
               border-color: ${theme.status[status].opacity};
 
               & > div svg > path,
               & > div svg > rect,
               & > div svg > circle {
-                stroke: ${theme.status[status].color};
+                stroke: #ccccc;
               }
             }
 
             &:active {
-              color: ${theme.status[status].active};
-              background-color: ${theme.status[status].opacity};
-              border-color: ${theme.status[status].opacity};
+              color: #ccccc;
+              background-color: #2d2d2d;
+              border-color:  #2d2d2d;
 
               & > div svg > path,
               & > div svg > rect,
               & > div svg > circle {
-                stroke: ${theme.status[status].active};
+                stroke:  #2d2d2d;
               }
             }
           `}
@@ -276,12 +276,12 @@ export const Button = styled.button<{
           &:disabled {
             background-color: transparent;
             border-color: transparent;
-            color: ${theme.grayCC};
+            color: #ccccc;
 
             & > div svg > path,
             & > div svg > rect,
             & > div svg > circle {
-              stroke: ${theme.grayCC};
+              stroke: #ccccc;
             }
           }
         `;
@@ -292,7 +292,7 @@ export const Button = styled.button<{
           background-color: transparent;
           border-color: transparent;
           padding: 0;
-          color: ${theme.gray2D};
+          color: #2d2d2d;
 
           & > div svg > path,
           & > div svg > rect,
@@ -303,12 +303,12 @@ export const Button = styled.button<{
           ${!isSubmitting &&
           css`
             &:hover {
-              color: ${theme.status[status].color};
+              color: #9f9f9f;
 
               & > div svg > path,
               & > div svg > rect,
               & > div svg > circle {
-                stroke: ${theme.status[status].color};
+                stroke: #9f9f9f;
               }
             }
           `}
@@ -316,12 +316,12 @@ export const Button = styled.button<{
           &:disabled {
             background-color: transparent;
             border-color: transparent;
-            color: ${theme.grayCC};
+            color: #CCCCC;
 
             & > div svg > path,
             & > div svg > rect,
             & > div svg > circle {
-              stroke: ${theme.grayCC};
+              stroke: #CCCCC;
             }
           }
         `;

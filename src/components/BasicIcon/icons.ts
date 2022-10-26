@@ -43,6 +43,14 @@ import { ReactComponent as Spinner } from '../../assets/icons/spinner.svg';
 import { ReactComponent as Search } from '../../assets/icons/search.svg';
 import { ReactComponent as Star } from '../../assets/icons/star.svg';
 import { ReactComponent as Trash } from '../../assets/icons/trash.svg';
+import { ReactComponent as EyeOff } from '../../assets/icons/eye-off.svg';
+import { ReactComponent as Eye } from '../../assets/icons/eye.svg';
+import { ReactComponent as Google } from '../../assets/icons/google.svg';
+import { ReactComponent as Login } from '../../assets/icons/login.svg';
+import { ReactComponent as Logout } from '../../assets/icons/logout.svg';
+import { ReactComponent as Menu } from '../../assets/icons/menu.svg';
+
+
 
 export const icons = {
   'academic-cap': AcademicCap,
@@ -85,6 +93,12 @@ export const icons = {
   'chevron-left': ChevronLeft,
   'chevron-right': ChevronRight,
   'chevron-up': ChevronUp,
+  'eye-off': EyeOff,
+  eye: Eye,
+  google: Google,
+  login: Login,
+  logout: Logout,
+  menu: Menu,
   x: X,  
   search: Search,
   spinner: Spinner,

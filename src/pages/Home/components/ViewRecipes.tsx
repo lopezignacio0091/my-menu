@@ -14,7 +14,7 @@ import { actions as recipesAction } from "../../../reducers/recipes/actions";
 import { recipesSelector } from "../../../reducers/recipes/selectors";
 import { ViewRecipeProps } from "./types";
 
-const TITLE = "Recetas de Cocina";
+const TITLE = "Gestionnar.TI";
 
 export const ViewRecipes: React.FC<ViewRecipeProps> = ({ onOpen }) => {
   const dispatch = useDispatch();

@@ -92,9 +92,7 @@
     },
     {
       "name": "Lemon pie",
-      "ingredients": [
-        "dasdas"
-      ],
+      "ingredients": ["dasdas"],
       "instructions": "dasdasd dadasd. ",
       "score": 2,
       "id": 8
@@ -110,6 +108,29 @@
       "cooked": true,
       "name": "Miloja de papas",
       "id": 9
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@admin.com",
+      "password":"test1234",
+      "name": "admin",
+      "rol": 1,
+      "surname":"admin"
+    },
+    {
+      "email": "juan@test.com",
+      "password":"test1234",
+      "name": "Juan",
+      "surname":"Lopez",
+      "rol": 1
+    },
+    {
+      "email": "juan@test.com",
+      "password":"test1234",
+      "name": "Juan",
+      "surname":"Lopez",
+      "rol": 1
     }
   ]
 }

@@ -33,8 +33,7 @@ try {
 }
 
 const wheelOpt = supportsPassive ? { passive: false } : false;
-const wheelEvent =
-  'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+const wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 
 // call this to Disable
 export function disableScroll() {
@@ -51,3 +50,13 @@ export function enableScroll() {
   window.removeEventListener('touchmove', preventDefault);
   window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
+
+export const enableScrollBody = () => {
+  const body = document.querySelector('body');
+  if (body) body.style.overflow = 'auto';
+};
+
+export const disableScrollBody = () => {
+  const body = document.querySelector('body');
+  if (body) body.style.overflow = 'hidden';
+};
