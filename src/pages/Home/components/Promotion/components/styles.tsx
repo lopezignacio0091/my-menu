@@ -9,10 +9,14 @@ export const Container = styled.div`
   max-height: 200px;
   max-width: 645px;
   padding: 20px 0px 20px 20px;
+  @media screen and (max-width: 600px) {
+    max-width: 540px;
+  }
 `;
 
 export const Image = styled.img`
   cursor: pointer;
+  min-width: 100px;
   width: 200px;
   border-radius: inherit;
   transition: transform 0.2s;
@@ -23,13 +27,20 @@ export const Image = styled.img`
       1.5
     ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
+  @media screen and (max-width: 600px) {
+    width: 80px;
+  }
 `;
 
 export const Section = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px 0px 20px 20px;
-  min-width: 280px;
+  width: 280px;
+  min-width: 184px;
+  @media screen and (max-width: 600px) {
+    padding: 20px 0px 20px 10px;
+  }
 `;
 
 export const Title = styled.h4`
@@ -46,4 +57,8 @@ export const Price = styled.div`
   line-height: 24px;
   /* font-family: "DM Sans" , sans-serif; */
   color: #53a16d;
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+  line-height: 22px;
+  }
 `;

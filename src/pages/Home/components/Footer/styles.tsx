@@ -12,6 +12,11 @@ export const Container = styled.div`
   color: #e5e6e8;
   position: relative;
   bottom: 0;
+  @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  
 `;
 
 export const Title = styled.a`

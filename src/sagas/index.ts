@@ -1,7 +1,8 @@
 import { all, call, spawn } from "redux-saga/effects";
 import recipes from "./recipes/recipes";
+import login from './login/login';
 
-const sagas = [...recipes];
+const sagas = [...recipes, ...login];
 
 export default function* rootSaga() {
   yield all(

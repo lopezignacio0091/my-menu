@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import BasicIcon from "../../../../../components/BasicIcon/BasicIcon";
 import Button from "../../../../../components/Button/Button";
 import TextInput from "../../../../../components/TextInput/TextInput";
+import { useDispatch, useSelector } from 'react-redux';
 import {
   email,
   joinValidations,
@@ -14,25 +15,31 @@ import {
   ContainerForm,
   ContainerMore,
   Divider,
+  ErrorLabel,
   LabelName,
   Title,
 } from "./styles";
+import { actions as loginActions } from '../../../../../reducers/login/actions';
+import { errorSelector, errorMessageSelector } from '../../../../../reducers/login/selectors';
 
 const FormLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
+  const error = useSelector(errorSelector);
+  const errorMessage  = useSelector(errorMessageSelector);
+  const dispatch = useDispatch();
 
   const toggleShowPassword = useCallback(() => {
     setShowPassword((prevState) => !prevState);
   }, []);
   const handleSubmit = useCallback(
     (values: any) => {
-      localStorage.setItem("user", "test");
-      navigate("/home");
-      // alert(`Bienvenido a Coffe.TI ${JSON.stringify(values)}`)
+      dispatch(loginActions.loginRequest(values));
+      
+      // navigate("/home");
+      // // alert(`Bienvenido a Coffe.TI ${JSON.stringify(values)}`)
     },
 
-    [navigate]
+    [dispatch]
   );
   return (
     <ContainerForm>
@@ -49,7 +56,7 @@ const FormLogin = () => {
             />
             <LabelName>Password *</LabelName>
             <Field
-              name="pasword"
+              name="password"
               variant="outlined"
               component={TextInput}
               validate={required}
@@ -62,6 +69,7 @@ const FormLogin = () => {
                 />
               }
             />
+            <ErrorLabel>{errorMessage}</ErrorLabel>
             <Divider />
             <ContainerMore>
               <Button

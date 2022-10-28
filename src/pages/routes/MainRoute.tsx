@@ -6,14 +6,17 @@ import Kitchen from "../Kitchen/Kitchen";
 import Menu from "../Menu/Menu";
 import ProtectedRoutes from "./ProtectedRoute";
 import PublicRoutes from "./PublicRoute";
-import PrivateRoute from "./PrivateRoute";
 import MenuFood from "../MenuFood/MenuFood";
+import { useSelector } from "react-redux";
+import { isLoguedSelector } from "../../reducers/login/selectors";
+
 
 const MainRoute = () => {
-  const user = localStorage.getItem("user");
+  const isAuth = useSelector(isLoguedSelector);
+
   return (
     <>
-     {user &&  <Menu />}
+      {isAuth && <Menu />}
       <Routes>
         {/** Protected Routes */}
         {/** Wrap all Route under ProtectedRoutes element */}

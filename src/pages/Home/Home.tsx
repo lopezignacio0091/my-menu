@@ -11,7 +11,7 @@ import SectionTop from "./components/SectionTop/SectionTop";
 import { Promotion } from "./components/Promotion/Promotion";
 import Footer from "./components/Footer/Footer";
 import SectionCarrousel from "./components/SectionCarousel/SectionCarousel";
-import Menu from "../Menu/Menu";
+import Testimonials from "./components/Info/Info";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -30,6 +30,7 @@ const Home = () => {
       <Container>
         <SectionTop />
         <Promotion />
+        <Testimonials/>
       </Container>
       <Footer />
     </ContainerFluid>

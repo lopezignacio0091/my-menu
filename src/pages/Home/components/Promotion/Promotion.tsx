@@ -1,5 +1,6 @@
 import React from "react";
 import CardPromotion from "./components/CardPromotion";
+import { isMobileOnly } from "react-device-detect";
 import {
   CardContainer,
   Container,
@@ -35,14 +36,14 @@ const products = [
 
 export const Promotion = () => {
   return (
-    <>
+    <Container>
       <SectionTitle>
         <TitlePrincipal>Productos destacados</TitlePrincipal>
         <SubtitlePrincipal>
           Contrary to populary beliefs, Lorem then Choose a piece of classical
         </SubtitlePrincipal>
       </SectionTitle>
-      <Container>
+      <>
         <SectionCard>
           <CardContainer>
             {products.map((p) => (
@@ -50,14 +51,16 @@ export const Promotion = () => {
             ))}
           </CardContainer>
         </SectionCard>
-        <SectionImage>
-          <SectionBottom>
-            <Title>Nueva Oferta</Title>
-            <Subtitle>50% OFF</Subtitle>
-            <Link>Ver oferta</Link>
-          </SectionBottom>
-        </SectionImage>
-      </Container>
-    </>
+        {!isMobileOnly && (
+          <SectionImage>
+            <SectionBottom>
+              <Title>Nueva Oferta</Title>
+              <Subtitle>50% OFF</Subtitle>
+              <Link>Ver oferta</Link>
+            </SectionBottom>
+          </SectionImage>
+        )}
+      </>
+    </Container>
   );
 };

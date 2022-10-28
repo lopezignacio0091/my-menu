@@ -1,19 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import { Navigate, Outlet } from "react-router-dom";
-
-const useAuth = () => {
-  const user = localStorage.getItem("user");
-  if (user) {
-    return true;
-  } else {
-    return false;
-  }
-};
+import { isLoguedSelector } from "../../reducers/login/selectors";
 
 const PublicRoutes = (props: any) => {
-  const auth = useAuth();
-
+  const auth = useSelector(isLoguedSelector);
+  
   return auth ? <Navigate to="/home" /> : <Outlet />;
 };
 

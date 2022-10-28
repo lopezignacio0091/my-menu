@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { Container, Title } from "./styles";
 import Links from "./components/Links";
+import { isMobileOnly } from "react-device-detect";
 
 const Footer = () => {
   const iframe = useMemo(
@@ -22,24 +23,28 @@ const Footer = () => {
           { name: "Venta mayorista", link: "/" },
         ]}
       />
-      <Links
-        title="Legal"
-        links={[
-          { name: "Terminos y condiciones", link: "/" },
-          { name: "Privacidad de datos", link: "/" },
-          { name: "Envios", link: "/" },
-          { name: "Arrepentimiento de compra", link: "/" },
-          { name: "Venta mayorista", link: "/" },
-        ]}
-      />
-      <Links
-        title="Cliente"
-        links={[
-          { name: "Mi cuenta", link: "/" },
-          { name: "Mis favoritos", link: "/" },
-          { name: "Accesos", link: "/" },
-        ]}
-      />
+      {!isMobileOnly && (
+        <>
+          <Links
+            title="Legal"
+            links={[
+              { name: "Terminos y condiciones", link: "/" },
+              { name: "Privacidad de datos", link: "/" },
+              { name: "Envios", link: "/" },
+              { name: "Arrepentimiento de compra", link: "/" },
+              { name: "Venta mayorista", link: "/" },
+            ]}
+          />
+          <Links
+            title="Cliente"
+            links={[
+              { name: "Mi cuenta", link: "/" },
+              { name: "Mis favoritos", link: "/" },
+              { name: "Accesos", link: "/" },
+            ]}
+          />{" "}
+        </>
+      )}
       <div>
         <div dangerouslySetInnerHTML={{ __html: iframe }} />
       </div>

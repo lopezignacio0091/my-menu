@@ -40,6 +40,18 @@ export const LabelName = styled.div`
   margin-bottom: 8px;
 `;
 
+export const ErrorLabel = styled.div`
+  align-items: center;
+  color: #da2020;
+  display: flex;
+  font-family: "Sans-serif";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  margin-top: 0 16px 0 8px;
+`;
+
 export const Divider = styled.div`
   border: none;
   border-color: #e0e0e0cc;

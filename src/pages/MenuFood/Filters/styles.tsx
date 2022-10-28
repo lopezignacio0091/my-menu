@@ -12,7 +12,6 @@ export const Container = styled.div`
   left: 0px;
   width: 280px;
   background-color: #e5e6e8;
-  margin-top: 80px;
   transition: all 0.5s;
   flex-shrink: 0;
 `;

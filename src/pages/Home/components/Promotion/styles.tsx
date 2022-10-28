@@ -1,16 +1,25 @@
 import styled from "styled-components";
 
+
+
+
 export const Container = styled.div`
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 10px;
   margin: 0 auto 30px;
+  @media screen and (max-width: 600px) {
+    width: 90%;
+    flex-direction: column;
+    padding: 0 1rem ;
+  }
 `;
 
 export const SectionCard = styled.div`
   display: flex;
   flex-direction: column;
+ 
 `;
 export const CardContainer = styled.div`
   display: flex;
@@ -40,24 +49,35 @@ export const SectionBottom = styled.div`
 `;
 export const SectionTitle = styled.div`
   margin-bottom: 40px;
+  @media screen and (max-width: 600px) {
+    margin-bottom: 20px;
+    padding: 0 1rem;
+  }
 `;
 
 export const TitlePrincipal = styled.h6`
- text-align: center;
+  text-align: center;
   font-size: 44px;
   text-transform: capitalize;
   font-weight: 900;
   line-height: 1;
   margin: 0;
+  @media screen and (max-width: 600px) {
+    font-size: 26px;
+  }
 `;
 
 export const SubtitlePrincipal = styled.p`
- text-align: center;
+  text-align: center;
   font-size: 18px;
   text-transform: capitalize;
   font-weight: 500;
   line-height: 18px;
-  color:#2d2d2d;
+  color: #2d2d2d;
+  @media screen and (max-width: 600px) {
+    font-size:16px;
+    margin-top: 8px;
+  }
 `;
 
 export const Title = styled.h6`
@@ -89,7 +109,7 @@ export const Link = styled.a`
   border: none;
   border-radius: 5px;
   margin-top: 8px;
-  &:hover{
+  &:hover {
     background: #fff;
     color: #53a16e;
   }
