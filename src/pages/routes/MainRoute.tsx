@@ -2,17 +2,18 @@ import React, { Fragment } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Login from "../Shared/Login/Login";
 import Home from "../Home/Home";
-import Kitchen from "../Kitchen/Kitchen";
+import Manager from "../Manager/Manager";
 import Menu from "../Menu/Menu";
 import ProtectedRoutes from "./ProtectedRoute";
 import PublicRoutes from "./PublicRoute";
 import MenuFood from "../MenuFood/MenuFood";
 import { useSelector } from "react-redux";
-import { isLoguedSelector } from "../../reducers/login/selectors";
+import { userSelector } from "../../reducers/login/selectors";
+import Order from "../Order/Order";
 
 
 const MainRoute = () => {
-  const isAuth = useSelector(isLoguedSelector);
+  const isAuth = useSelector(userSelector);
 
   return (
     <>
@@ -24,7 +25,8 @@ const MainRoute = () => {
           <Route path="/" element={<Navigate replace to="home" />} />
           <Route path="home" element={<Home />} />
           <Route path="menu" element={<MenuFood />} />
-          <Route path="kitchen" element={<Kitchen />} />
+          <Route path="manager" element={<Manager />} />
+          <Route path="order" element={<Order />} />
         </Route>
         {/** Public Routes */}
         {/** Wrap all Route under PublicRoutes element */}

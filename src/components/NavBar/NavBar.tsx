@@ -5,7 +5,7 @@ import React, {
   useState,
 } from "react";
 import { ReactComponent as PickitLogoMobile } from "../../assets/icons/pickit-logo-mobile.svg";
-import { ReactComponent as PickitLogo } from "../../assets/icons/pickit_logo_white.svg";
+import { ReactComponent as PickitLogo } from "../../assets/icons/logo_final_1.svg";
 import BasicIcon from "../BasicIcon/BasicIcon";
 import StaticIcon from "../StaticIcon/StaticIcon";
 import { disableScrollBody, enableScrollBody } from "../utils/scroll";
@@ -72,7 +72,7 @@ const NavBar: React.FC<NavbarProps> = ({
   );
 
   const handleClick = useCallback(() => {
-    handleToggle()();
+    handleToggle();
     if (logoOnClick) logoOnClick();
   }, [handleToggle, logoOnClick]);
 
@@ -133,8 +133,7 @@ const NavBar: React.FC<NavbarProps> = ({
             readAll={readAll}
             closeOnBlur={closeOnBlurNotification}
           />
-        <SideBar  isOpen={sideBarOpen}/>
-       
+        <SideBar  isOpen={sideBarOpen} onClose={handleToggle(SIDEBAR)}/>
         </NavBarContainer>
       </NavBarAnchor>
       <NavBarSpacer isMobile={isMobile} />

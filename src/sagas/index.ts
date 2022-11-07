@@ -1,8 +1,10 @@
 import { all, call, spawn } from "redux-saga/effects";
 import recipes from "./recipes/recipes";
 import login from './login/login';
+import order from './order/order';
+import table from './table/table';
 
-const sagas = [...recipes, ...login];
+const sagas = [...recipes, ...login , ...order, ...table];
 
 export default function* rootSaga() {
   yield all(

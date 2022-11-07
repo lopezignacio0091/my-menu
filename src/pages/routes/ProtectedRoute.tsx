@@ -2,10 +2,10 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import { Navigate, Outlet } from "react-router-dom";
-import { isLoguedSelector } from "../../reducers/login/selectors";
+import { userSelector } from "../../reducers/login/selectors";
 
 const ProtectedRoutes = (props: any) => {
-  const auth = useSelector(isLoguedSelector);
+  const auth = useSelector(userSelector);
 
   return auth ? <Outlet /> : <Navigate to="/login" />;
 };

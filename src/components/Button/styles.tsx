@@ -159,8 +159,8 @@ export const Button = styled.button<{
     switch (hierarchy) {
       case "primary":
         return css`
-          background-color: #0c969d;
-          border-color: #0c969d;
+          background-color: #436560;
+          border-color: #436560;
           color: white;
           height: ${circle ? "60px" : "48px"};
           & > div svg > path,
@@ -172,8 +172,8 @@ export const Button = styled.button<{
           ${!isSubmitting &&
           css`
             &:hover {
-              background-color: #3d9ba0;
-              border-color: #3d9ba0;
+              background-color: #436560;
+              border-color: #436560;
             }
 
             &:active {

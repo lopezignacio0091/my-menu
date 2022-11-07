@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 import { SidebarItemContainer } from './styles';
 import { SideBarItemProps } from './types';
-import { matchRoutes, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const SideBarItem: React.FC<SideBarItemProps> = ({
   testId,
@@ -23,10 +23,10 @@ export const SideBarItem: React.FC<SideBarItemProps> = ({
 
     if (action) {
       action();
-    } else if (path && history) {
+    } else if (path) {
       navigate(path);
     }
-  }, [selectNode, onClose, action, path, history, navigate]);
+  }, [selectNode, onClose, action, path, navigate]);
 
   useEffect(() => {
     const { pathname } = location || { pathname: '' };

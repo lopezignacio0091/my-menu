@@ -26,7 +26,4 @@ export const ContainerForm = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
-  @media screen and (max-width: 600px) {
-   margin:4rem;
-  }
 `;

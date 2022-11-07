@@ -12,20 +12,20 @@ export const ContainerForm = styled.div`
   top: 238px;
   padding: 2rem;
   width: 459px;
-  @media screen and (max-width: 600px) {
-   padding:4rem;
-  }
 `;
 
-export const Title = styled.div`
+export const Title = styled.h3`
   text-align: center;
   cursor: pointer;
   color: #499583;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 48px;
   font-weight: 900;
-  margin: 0 20px 20px;
+  text-align: center;
   text-transform: uppercase;
+  @media screen and (max-width: 600px) {
+    font-size: 26px;
+  }
 `;
 
 export const LabelName = styled.div`

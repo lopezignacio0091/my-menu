@@ -1,25 +1,30 @@
 import styled from "styled-components";
 
-
-
-
 export const Container = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   margin: 0 auto 30px;
   @media screen and (max-width: 600px) {
     width: 90%;
-    flex-direction: column;
-    padding: 0 1rem ;
+    flex-direction: row;
+    padding: 0 1rem;
   }
 `;
 
 export const SectionCard = styled.div`
   display: flex;
   flex-direction: column;
- 
+  justify-content: center;
+`;
+
+export const SectionContainers = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `;
 export const CardContainer = styled.div`
   display: flex;
@@ -36,16 +41,22 @@ export const SectionImage = styled.div`
   position: relative;
   width: 100%;
   background-repeat: no-repeat;
+  height: 100%;
 `;
 
 export const SectionBottom = styled.div`
+  align-self: center;
   bottom: 40px;
-  position: absolute;
   left: 30px;
   right: 30px;
   margin: 0 auto;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   z-index: 1;
+  min-height: 412px;
+  min-width: 560px;
 `;
 export const SectionTitle = styled.div`
   margin-bottom: 40px;
@@ -75,7 +86,7 @@ export const SubtitlePrincipal = styled.p`
   line-height: 18px;
   color: #2d2d2d;
   @media screen and (max-width: 600px) {
-    font-size:16px;
+    font-size: 16px;
     margin-top: 8px;
   }
 `;
@@ -83,11 +94,11 @@ export const SubtitlePrincipal = styled.p`
 export const Title = styled.h6`
   font-size: 17px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: 5px;
   color: #ffff;
-  margin: 18px;
+  margin: 8px;
 `;
 export const Subtitle = styled.h2`
   font-size: 50px;
@@ -95,7 +106,7 @@ export const Subtitle = styled.h2`
   text-transform: uppercase;
   line-height: 1;
   color: #ffff;
-  margin: 8px 16px 22px;
+  margin: 8px;
 `;
 
 export const Link = styled.a`

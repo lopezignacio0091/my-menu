@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from "react";
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from "react-router-dom";
 import BasicIcon from "../../../../BasicIcon/BasicIcon";
 import SideBarItem from "../SideBarItem/SideBarItem";
 import {
@@ -22,7 +22,8 @@ export const SideBarNode: React.FC<SideBarNodeProps> = ({
   path,
   selectNode,
   history,
-  content
+  content,
+  isView=true,
 }) => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -54,50 +55,42 @@ export const SideBarNode: React.FC<SideBarNodeProps> = ({
   };
 
   return (
-    <SidebarNodeContainer data-testid={testId}>
-      <SidebarNodeBox onClick={onClick}>
-        <BasicIcon
-          name={iconName}
-          color={
-            (path || action) && active
-              ? sidebar.node.active
-              : sidebar.node.color
-          }
-        />
-        <SibebarNodeLabel opened={opened} active={(path || action) && active}>
-          {name}
-        </SibebarNodeLabel>
-        {children && !path && !action && (
-          <IconContainer isOpen={opened}>
-            <BasicIcon name="chevron-down" color={sidebar.node.color} />
-          </IconContainer>
-        )}
-      </SidebarNodeBox>
-     
-        <SibebarNodeContent
-          maxHeight={itemContainerRef.current?.offsetHeight}
-          opened={opened}
-        >
-          <div ref={itemContainerRef}>
-            {/* {React.Children.map(children, (child) => {
-              // Checking isValidElement is the safe way and avoids a typescript
-              // error too.
-              if (React.isValidElement(child)) {
-                return React.cloneElement(child, {
-                  onClose,
-                  selectNode,
-                  history,
-                  opened,
-                });
+    <>
+      {isView && (
+        <SidebarNodeContainer data-testid={testId}>
+          <SidebarNodeBox onClick={onClick}>
+            <BasicIcon
+              name={iconName}
+              color={
+                (path || action) && active
+                  ? sidebar.node.active
+                  : sidebar.node.color
               }
-              return child;
-            })} */}
-          
-            <SideBarItem label={content?.label} path={content.path} />
-           
-          </div>
-        </SibebarNodeContent>
-    </SidebarNodeContainer>
+            />
+            <SibebarNodeLabel
+              opened={opened}
+              active={(path || action) && active}
+            >
+              {name}
+            </SibebarNodeLabel>
+            {children && !path && !action && (
+              <IconContainer isOpen={opened}>
+                <BasicIcon name="chevron-down" color={sidebar.node.color} />
+              </IconContainer>
+            )}
+          </SidebarNodeBox>
+
+          <SibebarNodeContent
+            maxHeight={itemContainerRef.current?.offsetHeight}
+            opened={opened}
+          >
+            <div ref={itemContainerRef}>
+              <SideBarItem label={content?.label} path={content.path} />
+            </div>
+          </SibebarNodeContent>
+        </SidebarNodeContainer>
+      )}
+    </>
   );
 };
 

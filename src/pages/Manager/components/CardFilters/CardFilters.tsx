@@ -13,13 +13,13 @@ import {
 import { CardFilterProps, CardProp } from "./types";
 
 const CardFilters: React.FC<CardFilterProps> = (props) => {
-  const { cards } = props;
+  const { cards , handleAction } = props;
 
-  const handleClick = useCallback(() => alert("agregar servicio"), []);
+  const handleClick = useCallback((name:string) => handleAction(name), [handleAction]);
 
   const handleRender = useCallback(
     (elem: CardProp) => (
-      <Card role="presentation" onClick={handleClick}>
+      <Card role="presentation" onClick={()=>handleClick(elem.filter)}>
         <Section>
           <Image src={elem?.url} alt={elem.title} />
           <Count>{elem?.count}</Count>

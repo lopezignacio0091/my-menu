@@ -9,7 +9,7 @@ const StaticIcon = ({
   testId = "icon-test-id",
   onClick,
 }: StaticIconProps) => {
-  const Icon = icons[name] || icons["pickit-user"];
+  const Icon = icons[name] || icons["user"];
   const handleClick = useCallback(() => {
     if (onClick) onClick();
   }, [onClick]);

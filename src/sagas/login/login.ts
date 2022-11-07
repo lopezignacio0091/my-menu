@@ -26,8 +26,8 @@ export function* getLogin({
   try {
     const response = yield call(LoginService.auth, payload);
     if (response.status === 200 && !!response.data.length) {
-      saveValue("user", response.data);
-      yield put(actions.loginSuccess(response?.data));
+      saveValue("user", response.data[0]);
+      yield put(actions.loginSuccess(response?.data[0]));
       yield put(replace(Routes.INDEX));
     } else {
       throw "Los datos ingresados son Incorrectos.";

@@ -14,6 +14,7 @@ export interface SideBarNodeProps {
   children?: any;
   history?: History;
   name?:string,
+  isView?:boolean
 }
 
 export interface SideBarContent {

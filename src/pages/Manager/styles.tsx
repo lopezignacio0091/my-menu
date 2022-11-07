@@ -7,7 +7,6 @@ export const Container = styled.div`
   flex-direction: column;
   height: 100%;
   overflow-y: auto;
-  margin-top: 80px;
   overflow-x: hidden;
   background-image: url(${Cocina});
 `;

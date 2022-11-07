@@ -9,6 +9,7 @@ export const Container = styled.div`
   max-height: 440px;
   max-width: 520px;
   margin: 16px 0 16px;
+  min-width: 320px;
 `;
 
 export const ContainerDescription = styled.div`

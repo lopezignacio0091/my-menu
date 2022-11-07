@@ -1,5 +1,6 @@
 export interface CardMenuProps {
   card: Card;
+  addCard: (menu: any) => void;
 }
 
 export interface Card {

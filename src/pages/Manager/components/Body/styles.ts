@@ -6,7 +6,8 @@ export const Container = styled.div`
   box-shadow: 0px 1px 12px rgba(45, 45, 45, 0.25);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  max-height: 100%;
+  height: 100vh;
   overflow-y: auto;
   margin: 20px 0 20px;
   padding: 20px;

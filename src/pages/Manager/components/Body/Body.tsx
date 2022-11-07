@@ -11,25 +11,25 @@ import {
 } from "./styles";
 import Button from "../../../../components/Button/Button";
 
-const Body = () => {
+const Body = (props:any) => {
   const [current, setCurrent] = useState(-1);
+  const {tables} = props;
 
   const onItemClicked = (index: number) => {
     setCurrent((prev) => (prev === index ? -1 : index));
   };
 
   return (
-    <>
       <Container>
-        {[0, 1, 2, 3, 4, 5].map((index) => (
-          <Section>
+        {tables.map((elem:any) => (
+          <Section key={elem.title}>
             <Collapsible
-              open={current === index}
-              onClick={() => onItemClicked(index)}
+              open={current === elem.id}
+              onClick={() => onItemClicked(elem.id)}
             >
               <ContainerTop>
                 <div>
-                  <h3 style={{ margin: 0 }}>{`Mesa ${index + 1}`}</h3>
+                  <h3 style={{ margin: 0 }}>{elem.name}</h3>
                 </div>
                 <ButtonContainer>
                   <Button
@@ -50,13 +50,12 @@ const Body = () => {
                     minus expedita saepe praesentium itaque molestiae eveniet!
                   </p>
                 </Description>
-                <Date>21:33:03</Date>
+                <Date>{elem?.order?.date}</Date>
               </ContainerBottom>
             </Collapsible>
           </Section>
         ))}
       </Container>
-    </>
   );
 };
 

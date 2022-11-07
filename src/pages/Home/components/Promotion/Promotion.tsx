@@ -7,6 +7,7 @@ import {
   Link,
   SectionBottom,
   SectionCard,
+  SectionContainers,
   SectionImage,
   SectionTitle,
   Subtitle,
@@ -43,7 +44,7 @@ export const Promotion = () => {
           Contrary to populary beliefs, Lorem then Choose a piece of classical
         </SubtitlePrincipal>
       </SectionTitle>
-      <>
+      <SectionContainers>
         <SectionCard>
           <CardContainer>
             {products.map((p) => (
@@ -60,7 +61,7 @@ export const Promotion = () => {
             </SectionBottom>
           </SectionImage>
         )}
-      </>
+      </SectionContainers>
     </Container>
   );
 };

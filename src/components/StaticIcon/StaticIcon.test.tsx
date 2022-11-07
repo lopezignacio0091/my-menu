@@ -4,7 +4,7 @@ import StaticIcon from './StaticIcon';
 
 const testId = 'icon-id';
 
-const setup = () => render(<StaticIcon name="pickit-user" testId={testId} />);
+const setup = () => render(<StaticIcon name="user" testId={testId} />);
 
 describe('Icon test suite', () => {
   afterEach(cleanup);

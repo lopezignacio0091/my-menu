@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from "react";
 import { Form, Field } from "react-final-form";
-import { useNavigate } from "react-router-dom";
 import BasicIcon from "../../../../../components/BasicIcon/BasicIcon";
 import Button from "../../../../../components/Button/Button";
 import TextInput from "../../../../../components/TextInput/TextInput";
@@ -69,7 +68,7 @@ const FormLogin = () => {
                 />
               }
             />
-            <ErrorLabel>{errorMessage}</ErrorLabel>
+            {error && <ErrorLabel>{errorMessage}</ErrorLabel>}
             <Divider />
             <ContainerMore>
               <Button
